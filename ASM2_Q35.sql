@@ -1,0 +1,7 @@
+USE [SQL_ASM2]
+GO
+	SELECT* FROM File_DL AS F
+	WHERE ( SELECT DungLuong
+			FROM BaiViet AS BV
+			WHERE BV.MaBai = F.MaBai ) > 200
+GO

@@ -1,0 +1,13 @@
+USE [SQL_ASM2]
+   GO
+	CREATE PROCEDURE sp_TimND
+	 @MaNV varchar(10)
+	AS
+	BEGIN
+	  SELECT * FROM NguoiDung
+	  WHERE @MaNV = ID
+	END
+
+
+	EXEC sp_TimND'SV01'
+	EXEC sp_TimND'SV02'
